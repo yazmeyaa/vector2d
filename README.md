@@ -17,7 +17,7 @@ A comprehensive TypeScript library for 2D vector operations, including addition,
 You can install the library using npm:
 
 ```bash
-npm install vector2d
+npm install ts-vector2d
 ```
 
 ## Usage
