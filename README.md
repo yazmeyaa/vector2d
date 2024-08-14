@@ -49,6 +49,7 @@ console.log(`Normalized vector: (${normalized.getX()}, ${normalized.getY()})`);
 constructor(x: number, y: number)
 x - The x-coordinate.
 y - The y-coordinate.
+```
 
 Methods
 - `getX(): number` - Gets the x-coordinate.
@@ -71,4 +72,3 @@ Methods
 - `angle(): number` - Calculates the angle of this vector relative to the positive X-axis.
 - `rotate(angle: number): Vector2D` - Rotates this vector by a given angle.
 - `lerp(vector: Vector2D, t: number): Vector2D` - Performs linear interpolation between this vector and another vector.
-```
