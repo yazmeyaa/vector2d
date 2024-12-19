@@ -2,14 +2,32 @@ export class Vector2D {
   private x: number;
   private y: number;
 
+  constructor();
+  /**
+   * Creates a new vector with coordinates of provided Vector2D.
+   * @param {Vector2D} vec - The x-coordinate.
+   */
+  constructor(vec: Vector2D);
   /**
    * Creates a new vector with coordinates (x, y).
-   * @param {number} x - The x-coordinate.
-   * @param {number} y - The y-coordinate.
+   * @param {number} a - The x-coordinate.
+   * @param {number} b - The y-coordinate.
    */
-  constructor(x: number = 0, y: number = 0) {
-    this.x = x;
-    this.y = y;
+  constructor(a: number, b: number);
+
+  constructor(a?: number | Vector2D, b?: number) {
+    if (a === undefined && b === undefined) {
+      this.x = this.y = 0;
+      return;
+    }
+
+    if (a instanceof Vector2D) {
+      this.x = a.x ?? 0;
+      this.y = a.y ?? 0;
+    } else {
+      this.x = a ?? 0;
+      this.y = b ?? 0;
+    }
   }
 
   /**
@@ -130,7 +148,7 @@ export class Vector2D {
    * @returns {Vector2D} The cloned vector.
    */
   clone(): Vector2D {
-    return new Vector2D(this.x, this.y);
+    return new Vector2D(this);
   }
 
   /**

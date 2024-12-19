@@ -120,11 +120,11 @@ describe("Vector2D", () => {
     expect(result.getY()).toBeCloseTo(1);
   });
 
-  test('lerp interpolates correctly', () => {
+  test("lerp interpolates correctly", () => {
     const vector1 = new Vector2D(0, 0);
     const vector2 = new Vector2D(10, 10);
     const result = vector1.lerp(vector2, 0.5);
     expect(result.getX()).toBe(5);
     expect(result.getY()).toBe(5);
-});
+  });
 });
